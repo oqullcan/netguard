@@ -1,23 +1,6 @@
-
 <div align="center">
-  <h2><strong><i>NetGuard: A Framework for Advanced Network Security Analysis and Intrusion Detection</i></strong></h2>
+  <h2><strong>NetGuard: A Framework for Advanced Network Security Analysis and Intrusion Detection</strong></h2>
 </div>
-
-<div align="center">
-  <h3><strong><i>Security Warning</i></strong></h3>
-</div>
-
-NetGuard is a network security monitoring tool developed **for educational purposes only** and for use on your own networks. Use of this tool should follow these guidelines:
-
-1. Use NetGuard **only on networks that you own or have permission to use**
-2. Maintain the confidentiality and security of **data** captured during the use of this tool
-3. Follow **responsible disclosure principles** - report vulnerabilities you discover directly to the appropriate parties
-4. Comply with local **laws and regulations** when using the tool
-5. If you are performing extensive security testing, do so **with express prior permission**
-
-Using this tool to abuse it, gain unauthorized access, or perform network breaches is **illegal** and not supported.
-
----
 
 ## Table of Contents
 
@@ -36,8 +19,6 @@ Using this tool to abuse it, gain unauthorized access, or perform network breach
 13. [Citation Information](#12-citation-information)
 14. [License and Legal Considerations](#13-license-and-legal-considerations)
 15. [Acknowledgments](#14-acknowledgments)
-
----
 
 ## Abstract
 
