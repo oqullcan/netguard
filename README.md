@@ -1,19 +1,5 @@
 # NetGuard: A Framework for Advanced Network Security Analysis and Intrusion Detection
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/oqullcan/netguard/releases)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://www.rust-lang.org/)
-[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.XXXXXXX-blue.svg)](https://doi.org/)
-
----
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/oqullcan/netguard/main/assets/images/logo.png" alt="NetGuard Logo" width="300">
-  <p><i>Advanced Network Security Monitoring and Analysis</i></p>
-</div>
-
----
-
 ## ⚠️ Security Warning
 
 NetGuard is a network security monitoring tool developed **for educational purposes only** and for use on your own networks. Use of this tool should follow these guidelines:
