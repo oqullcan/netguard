@@ -1,6 +1,6 @@
 # NetGuard: A Framework for Advanced Network Security Analysis and Intrusion Detection
 
-## ⚠️ Security Warning
+## Security Warning
 
 NetGuard is a network security monitoring tool developed **for educational purposes only** and for use on your own networks. Use of this tool should follow these guidelines:
 
