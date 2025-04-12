@@ -1,0 +1,58 @@
+[package]
+name = "netguard"
+version = "0.1.0"
+edition = "2021"
+authors = ["oqullcan"]
+description = "High-performance network security analysis tool using machine learning for zero-day vulnerability detection"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/oqullcan/netguard"
+
+[dependencies]
+# Networking
+tokio = { version = "1.28", features = ["full"] }
+pcap = "1.1.0"
+pnet = "0.33.0"
+tls-parser = "0.11.0"
+
+# Machine Learning
+linfa = "0.6.1"
+linfa-clustering = "0.6.1"
+ndarray = "0.15.6"
+smartcore = "0.3.2"
+
+# Data processing and analysis
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4.26", features = ["serde"] }
+
+# CLI & Logging
+clap = { version = "4.3", features = ["derive"] }
+log = "0.4.19"
+env_logger = "0.10.0"
+colored = "2.0.4"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0.43"
+
+# Performance
+rayon = "1.7.0"
+
+# Additional dependencies
+ipnetwork = "0.20"
+ndarray-rand = "0.14"
+ndarray-stats = "0.5"
+num = "0.4"
+pnet_datalink = "0.33"
+pnet_packet = "0.33"
+pnet_transport = "0.33"
+rand = "0.8"
+regex = "1.7"
+socket2 = "0.5"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

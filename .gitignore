@@ -1,0 +1,142 @@
+# ----------------------
+# NetGuard .gitignore File
+# ----------------------
+
+# Rust / Cargo klasörleri ve dosyaları
+/target/
+**/*.rs.bk
+**/*.rs.orig
+Cargo.lock
+
+# ----------------------
+# IDE ve Editör Dosyaları
+# ----------------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ----------------------
+# İşletim Sistemi Dosyaları
+# ----------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+.directory
+.Trash-*
+
+# ----------------------
+# Ağ Yakalama ve Veri Dosyaları
+# ----------------------
+# Yakalama dosyaları (yalnızca belirli örnekler hariç)
+*.pcap
+*.cap
+*.pcapng
+*.dump
+*.dmp
+!test_data/loopback.pcap
+
+# Büyük veri dosyaları
+*.csv
+*.sqlite
+*.db
+!data/signatures/network_threats.json
+
+# ----------------------
+# Güvenlik ve Hassas Bilgiler
+# ----------------------
+# Ortam değişkenleri ve konfigürasyon
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+*.jks
+*.keystore
+*credential*
+*password*
+*secret*
+
+# ----------------------
+# Log Dosyaları
+# ----------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------------
+# Geçici Dosyalar
+# ----------------------
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*.backup
+*.old
+
+# ----------------------
+# Proje Özel Dosyalar
+# ----------------------
+# Model dosyaları (default.model hariç)
+data/models/*
+!data/models/.gitkeep
+!data/models/default.model
+
+# Yakalama klasörleri
+data/captures/*
+!data/captures/.gitkeep
+
+# Rapor klasörleri
+data/reports/*
+!data/reports/.gitkeep
+
+# ----------------------
+# Derleme Çıktıları
+# ----------------------
+/dist/
+/out/
+/build/
+/.build/
+
+# Dil özel çıktılar
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.class

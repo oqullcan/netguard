@@ -1,0 +1,41 @@
+{
+  "general": {
+    "log_level": "info",
+    "data_dir": "./data",
+    "check_updates": true
+  },
+  "capture": {
+    "default_interface": null,
+    "promiscuous_mode": true,
+    "buffer_size": 65535,
+    "filter": null,
+    "snapshot_length": 65535,
+    "save_packets": false,
+    "save_path": "./data/captures"
+  },
+  "analysis": {
+    "protocol_analysis": true,
+    "signature_detection": true,
+    "anomaly_detection": true,
+    "real_time_alerts": true,
+    "signature_path": "./data/signatures"
+  },
+  "reporting": {
+    "generate_reports": true,
+    "default_format": "html",
+    "include_visualizations": true,
+    "report_path": "./data/reports"
+  },
+  "ml": {
+    "enabled": true,
+    "model_type": "isolation_forest",
+    "model_path": "./data/models/default.model",
+    "anomaly_threshold": 0.7,
+    "train_with_captured": false
+  },
+  "ui": {
+    "use_color": true,
+    "show_packet_details": false,
+    "max_display_threats": 100
+  }
+}

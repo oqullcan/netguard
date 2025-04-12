@@ -1,0 +1,161 @@
+{
+  "signatures": [
+    {
+      "id": "SIG-1001",
+      "name": "TCP SYN Flood Attack",
+      "description": "TCP SYN Flood DoS attack detection",
+      "severity": 8,
+      "type": "DenialOfService",
+      "pattern": {
+        "protocol": "TCP",
+        "flags": ["SYN"],
+        "threshold": {
+          "count": 100,
+          "timeframe": 5,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1002",
+      "name": "ICMP Ping Sweep",
+      "description": "ICMP Echo Request sweep (potential network reconnaissance)",
+      "severity": 3,
+      "type": "Reconnaissance",
+      "pattern": {
+        "protocol": "ICMP",
+        "type": 8,
+        "threshold": {
+          "count": 10,
+          "timeframe": 60,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1003",
+      "name": "DNS Amplification Attack",
+      "description": "DNS reflection/amplification DDoS attack",
+      "severity": 7,
+      "type": "DenialOfService",
+      "pattern": {
+        "protocol": "UDP",
+        "dst_port": 53,
+        "payload_contains": "ANY",
+        "threshold": {
+          "count": 50,
+          "timeframe": 10,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1004",
+      "name": "SSH Brute Force Attempt",
+      "description": "Multiple failed SSH login attempts",
+      "severity": 5,
+      "type": "BruteForce",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": 22,
+        "threshold": {
+          "count": 5,
+          "timeframe": 60,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1005",
+      "name": "HTTP Directory Traversal",
+      "description": "HTTP request containing directory traversal patterns",
+      "severity": 6,
+      "type": "WebAttack",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": 80,
+        "payload_regex": "\\.\\./|%2e%2e%2f|%252e%252e%252f"
+      }
+    },
+    {
+      "id": "SIG-1006",
+      "name": "SMB Service Scan",
+      "description": "Scan for open SMB services (potential reconnaissance)",
+      "severity": 4,
+      "type": "Reconnaissance",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": [139, 445],
+        "threshold": {
+          "count": 3,
+          "timeframe": 60,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1007",
+      "name": "SQL Injection Attempt",
+      "description": "HTTP request containing SQL injection patterns",
+      "severity": 7,
+      "type": "WebAttack",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": [80, 443],
+        "payload_regex": "\\s*['\\\"][\\s;]*OR|UNION\\s+SELECT|INSERT\\s+INTO|DELETE\\s+FROM"
+      }
+    },
+    {
+      "id": "SIG-1008",
+      "name": "FTP Brute Force Attempt",
+      "description": "Multiple failed FTP login attempts",
+      "severity": 5,
+      "type": "BruteForce",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": 21,
+        "threshold": {
+          "count": 5,
+          "timeframe": 60,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1009",
+      "name": "RDP Brute Force Attempt",
+      "description": "Multiple RDP connection attempts",
+      "severity": 6,
+      "type": "BruteForce",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": 3389,
+        "threshold": {
+          "count": 5,
+          "timeframe": 60,
+          "unit": "seconds"
+        }
+      }
+    },
+    {
+      "id": "SIG-1010",
+      "name": "Potential C&C Communication",
+      "description": "Communication pattern consistent with command and control traffic",
+      "severity": 8,
+      "type": "Malware",
+      "pattern": {
+        "protocol": "TCP",
+        "dst_port": [1024, 65535],
+        "timing": {
+          "interval": 60,
+          "variance": 5,
+          "unit": "seconds"
+        },
+        "flow": {
+          "duration": "long",
+          "bytes": "low"
+        }
+      }
+    }
+  ]
+} 
